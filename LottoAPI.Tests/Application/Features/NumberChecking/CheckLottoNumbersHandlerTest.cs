@@ -67,7 +67,7 @@ public class CheckLottoNumbersHandlerTest
             );
         _lottoRepositoryMock.Setup(m => m.GetAll()).ReturnsAsync(lottos);
         _resultRepositoryMock
-            .Setup(m => m.GetResults(It.IsAny<string>(), It.IsAny<int>()))
+            .Setup(m => m.GetResult(It.IsAny<string>(), It.IsAny<int>()))
             .ReturnsAsync(
                 new Result
                 {
@@ -116,7 +116,7 @@ public class CheckLottoNumbersHandlerTest
             );
         _lottoRepositoryMock.Setup(m => m.GetAll()).ReturnsAsync(lottos);
         _resultRepositoryMock
-            .Setup(m => m.GetResults(It.IsAny<string>(), It.IsAny<int>()))
+            .Setup(m => m.GetResult(It.IsAny<string>(), It.IsAny<int>()))
             .ReturnsAsync((Result)null!);
 
         var resultChecks = await _handler.CheckLottoNumbers(
@@ -150,7 +150,7 @@ public class CheckLottoNumbersHandlerTest
             );
         _lottoRepositoryMock.Setup(m => m.GetAll()).ReturnsAsync(lottos);
         _resultRepositoryMock
-            .Setup(m => m.GetResults(It.IsAny<string>(), It.IsAny<int>()))
+            .Setup(m => m.GetResult(It.IsAny<string>(), It.IsAny<int>()))
             .ReturnsAsync(
                 (string lottoId, int id) =>
                     new Result

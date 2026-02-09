@@ -19,7 +19,6 @@ public class CaixaLottoService : IExternalLottoService
         var externalResult = await client.GetStringAsync(
             $"https://servicebus2.caixa.gov.br/portaldeloterias/api/{lottoId}/{resultId}"
         );
-        Console.WriteLine(externalResult);
 
         var result = JsonSerializer.Deserialize<CaixaLottoResult>(externalResult);
 

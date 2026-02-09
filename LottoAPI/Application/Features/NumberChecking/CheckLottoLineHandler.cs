@@ -45,7 +45,7 @@ public class CheckLottoLineHandler : ICheckLottoLineUseCase
         }
 
         var resultChecks = new List<ResultCheck>();
-        foreach (var id in Enumerable.Range(request.From, to - request.From - 1))
+        for (var id = request.From; id <= to; id++)
         {
             var result = await _resultRepository.GetResult(lottoId, id);
             if (result == null)

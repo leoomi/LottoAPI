@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="LottoAPI.Tests/LottoAPI.Tests.csproj" />
+  <Project Path="LottoAPI/LottoAPI.csproj" />
+</Solution>
